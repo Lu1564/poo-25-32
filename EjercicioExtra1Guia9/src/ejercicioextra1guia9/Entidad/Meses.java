@@ -14,8 +14,10 @@ import java.util.Scanner;
 public class Meses {
 
     private String[] meses = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
-    private String mesSecreto = meses[7];
+    private String mesSecreto = meses[(int) (Math.random() * 12)];
     Scanner leer = new Scanner(System.in);
+    
+    
 
     public Meses() {
 

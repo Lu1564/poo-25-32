@@ -18,8 +18,6 @@ public class EjercicioExtra2Guia9 {
      */
     public static void main(String[] args) {
         
-        
-
         AhorcadoService jugador = new AhorcadoService();
         jugador.juego();
 

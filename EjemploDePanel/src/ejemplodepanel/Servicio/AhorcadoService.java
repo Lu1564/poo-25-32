@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicioextra2guia9.Service;
+package ejemplodepanel.Servicio;
 
-import ejercicioextra2guia9.Entidad.Ahorcado;
+import ejemplodepanel.Entidad.Ahorcado;
 import java.util.Arrays;
-
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -47,12 +46,14 @@ previamente mencionados e informará cuando el usuario descubra toda la palabra 
 
     public void crearJuego() {
         
-//        int dia = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el dia"));
+//        String palabra = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el dia"));
 //        System.out.println(dia);
-        System.out.println("Ingrese la palabra para crear el juego:");
-        String palabra = leer.next();
-        System.out.println("Ingrese la cantidad de intentos que le dara al usuario");
-        juego.setIntentos(leer.nextInt());
+//        System.out.println("Ingrese la palabra para crear el juego:");
+        String palabra = JOptionPane.showInputDialog("Ingrese la palabra para crear el juego:");
+//        String palabra = leer.next();
+//        System.out.println("Ingrese la cantidad de intentos que le dara al usuario");
+        int intento = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la cantidad de intentos que le dara al usuario"));
+        juego.setIntentos(intento);
         String vector[] = new String[palabra.length()];
         for (int i = 0; i < palabra.length(); i++) {
             vector[i] = palabra.substring(i, i + 1);
@@ -139,68 +140,4 @@ cada vez que se busque una letra que no esté, se le restará uno a sus oportuni
          */
     }
 
-    public void mostrar() {
-        String matriz[][] = new String[20][11];
-        for (int i = 0; i < 11; i++) {
-            for (int j = 0; j < 11; j++) {
-
-                if (j == 0) {
-                    matriz[i][j] = "[]";
-                }
-                if (i == 0 && j <= 6) {
-                    matriz[i][j] = "[]";
-                }
-                if (j > 0 && i > 0) {
-                    matriz[i][j] = " ";
-                }
-                if (i == 0 && j > 6) {
-                    matriz[i][j] = " ";
-                }
-
-                System.out.print(matriz[i][j]);
-            }
-            System.out.println("");
-        }
-
-        for (int i = 0; i < 11; i++) {
-            for (int j = 0; j < 11; j++) {
-                if (j == 0) {
-                    matriz[i][j] = "[]";
-                }
-                if (i == 0 && j <= 6) {
-                    matriz[i][j] = "[]";
-                }
-                if (j > 0 && i > 0) {
-                    matriz[i][j] = " ";
-                }
-                if (i == 0 && j > 6) {
-                    matriz[i][j] = " ";
-                }
-                if (i == 1 && j == 6) {
-                    matriz[i][j] = "|";
-                }
-                if (i == 2 && j > 1 && j < 9) {
-                    matriz[i][j] = "[*]";
-                }
-                if (j == 2 && i > 1 && i < 8) {
-                    matriz[i][j] = "[*]";
-                }
-                if (j == 10 && i > 1 && i < 8) {
-                    matriz[i][j] = "[*]";
-                }
-                if (i == 5 && j == 6) {
-                    matriz[i][j] = "|";
-                }
-                if (i == 6 && j == 6) {
-                    matriz[i][j] = "|";
-                }
-                if (i == 7 && j == 6) {
-                    matriz[i][j] = "|";
-                }
-
-                System.out.print(matriz[i][j]);
-            }
-            System.out.println("");
-        }
-    }
 }

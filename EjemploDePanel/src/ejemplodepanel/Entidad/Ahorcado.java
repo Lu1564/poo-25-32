@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejercicioextra2guia9.Entidad;
+package ejemplodepanel.Entidad;
 
 /**
  *

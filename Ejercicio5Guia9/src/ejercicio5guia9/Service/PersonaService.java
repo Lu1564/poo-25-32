@@ -40,6 +40,16 @@ public class PersonaService {
         return edad;
     }
     
+//    public static int calcularEdad(Persona p) {
+//        int diferencia;
+//        Date act = new Date();
+//        diferencia = act.getYear() - p.getFechaNac().getYear();
+//        if (act.getMonth() < p.getFechaNac().getMonth()) {
+//            diferencia--;
+//        } else if (act.getMonth() == p.getFechaNac().getMonth()) {
+//            if (act.getDay() < p.getFechaNac().getDay()) {
+//                diferencia--;
+    
     public boolean menorQue (int edad){
         System.out.println("Ingrese una edad para comparar si es mayor o menor");
         int resp = leer.nextInt();
